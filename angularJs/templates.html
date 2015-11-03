@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="moviesApp">
+	<head>
+		<title> AngularJs templates </title>
+		<meta charset="UTF-8" />
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"	></script>
+		<style>
+			body {
+				direction: rtl;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div ng-controller="moviescontroller">
+			<h1> שחקנים: </h1>
+			<ul>
+				<li>
+					שחקנים
+				</li>
+				<li>
+					מובילים
+				</li>
+				<li>
+					חיפוש
+				</li>
+			</ul>
+
+		</div>
+
+		<script>
+			var app = angular.module("moviesApp", []);
+			app.controller("moviescontroller", function($scope) {
+				$scope.actor = [{
+					fName : "קיאנו ",
+					lName : " ריבס",
+					pic : "http://images1.ynet.co.il/PicServer4/2014/12/11/5751853/57518501990100650993no.jpg",
+					imdb : "http://www.imdb.com/name/nm0000206/"
+				}, {
+					fName : "ג'ייסון ",
+					lName : " סטוטהם",
+					pic : "http://www.sratim.co.il/photos/actors/normal/7/657_20120804163600_546568718274.jpg",
+					imdb : "http://www.imdb.com/name/nm0005458/"
+				}, {
+					fName : "גל ",
+					lName : " גדות",
+					pic : "http://images1.ynet.co.il/xnet//PicServer2/pic/012014/467537/LAI068512_7.jpg",
+					imdb : "http://www.imdb.com/name/nm2933757/"
+				}, {
+					fName : "ווין ",
+					lName : " דיזל",
+					pic : "http://www.sratim.co.il/contents/news/7/1487.jpg",
+					imdb : "http://www.imdb.com/name/nm0004874/"
+				}];
+			});
+		</script>
+	</body>
+</html>
